@@ -6,6 +6,7 @@ class IsAdmin(BasePermission):
     def has_permission(self, request, view):
         if request.user.is_authenticated:
             return request.user.is_staff or request.user.is_admin
+        return None
 
 
 class IsAuthorOrAdminOrModerator(BasePermission):
@@ -27,8 +28,11 @@ class IsAuthorOrAdminOrModerator(BasePermission):
                 and request.user.is_authenticated
             ):
                 return True
+            return None
         elif request.method in SAFE_METHODS:
             return True
+        else:
+            return None
 
 
 class IsAdminOrReadOnly(BasePermission):
@@ -38,3 +42,4 @@ class IsAdminOrReadOnly(BasePermission):
             return True
         if request.user.is_authenticated:
             return request.user.is_staff or request.user.is_admin
+        return None
