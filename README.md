@@ -6,8 +6,8 @@
 <br>
 
 ## Демо развернутого проекта
-https://51.250.27.122/admin
-Почта: admin@admin
+http://51.250.27.122/admin/<br>
+Почта: admin@admin<br>
 Пароль: admin
 
 <br>
