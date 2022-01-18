@@ -35,7 +35,7 @@ docker-compose -f infra/docker-compose.yaml up -d --build
 3. Выполнить миграции и собрать статику
 
 ```
-docker-compose -f infra/docker-compose.yaml exec web python manage.py migrate 
+docker-compose -f infra/docker-compose.yaml exec web python manage.py migrate
 docker-compose -f infra/docker-compose.yaml exec web python manage.py collectstatic --no-input
 ```
 <br>
