@@ -8,6 +8,9 @@ services:
       - ./.env
   web:
     image: achakhalian/yamdb_web:latest
+    # build:
+    #   context: ../
+    #   dockerfile: ./api_yamdb/Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
